@@ -1,0 +1,686 @@
+:root {
+    --primario: rgba(42, 90, 130, 1);
+    --secondario: rgba(227, 197, 142, 1);
+    --text: rgba(0, 0, 0, 1);
+    --sfondo: rgba(249, 247, 242, 1);
+
+    --font-title: 'Playfar Display', serif;
+    --font-subtitle: 'Montserrat', sans-serif;
+    --font-base: 'Lato', serif;
+
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--sfondo);
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, ol {
+    margin: 0;
+    padding: 0;
+}
+
+.card_contenitore {
+	max-width: 1100px; 
+	margin: 0 auto; 
+}
+
+header {
+    background-color: var(--primario);
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    font-family: var(--font-title);
+}
+header div {
+    display: flex;
+    justify-content: space-between;
+    padding: 32px;
+}
+header a {
+    color: var(--sfondo);
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+header a:hover {
+    transform: scale(1.05);
+}
+header nav a {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+header nav a:hover {
+    transform: scale(1.05);
+    color: var(--secondario);
+}
+header p {
+    font-size: 400;
+}
+header nav ul {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+    font-family: var(--font-subtitle);
+}
+
+.hero {
+    position: relative;
+}
+
+.hero_txt h1 {
+    font-family: var(--font-title);
+    color: var(--secondario);
+    text-align: center;
+    font-size: 48px;
+    width: 100%;
+    margin: 0;
+}
+
+.hero_img img {
+    height: 500px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center 40%;
+    display: block;
+}
+
+
+.hero_txt {
+    position: absolute;
+    top: 5%;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    color: var(--bianco);
+}
+
+.hero::before {
+    content: "";
+    background-color: var(--primario);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+}
+
+
+.card_contenitore {
+    margin-top: 128px;
+    padding: 0 32px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    align-items: stretch;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+.card_item {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card_item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px rgba(227, 197, 142, 1);
+}
+
+.card_img {
+    position: relative;
+}
+
+.card_img img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.card_text {
+    background-color: white;
+    padding: 32px 16px;
+    flex-grow: 1;
+}
+
+.card_text h2 {
+    font-size: 21px;
+    font-weight: normal;
+    font-family: var(--font-subtitle);
+    color: var(--primario);
+}
+
+.card_text p {
+    font-family: var(--font-base);
+    color: var(--primario);
+}
+
+.location-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.material-icons {
+    color: var(--secondario);
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+
+
+.curiosità_container {
+    padding: 64px 32px;
+    max-width: 1100px;
+    margin: 0 auto;
+    margin-top: 120px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+}
+
+
+.curiosità_content h3 {
+    color: var(--secondario);
+    font-family: var(--font-title);
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 28px;
+    transition: transform 0.3 ease;
+    display: inline-block;
+}
+.curiosità_container h3:hover {
+    transform: scale(1.05);
+}
+
+.curiosità_content p {
+    font-family: var(--font-base);
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: var(--text);
+
+}
+
+.curiosità_img_wrap {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 10px;
+    overflow: hidden;
+    min-width: 280px;
+}
+
+
+.curiosità_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    margin: 0;
+    object-position: center center;
+}
+
+.site-footer {
+    background-color: var(--primario);
+    color: var(--sfondo);
+    padding: 40px 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    gap: 40px;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 200px;
+    padding: 10px;
+    text-align: center;
+}
+
+
+.footer-col ul {
+    list-style: none;
+    padding: 0 10px;
+}
+
+.footer-col h5 {
+    font-family: var(--font-subtitle);
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.footer-col ul li {
+    margin-bottom: 8px;
+    font-family: var(--font-base);
+}
+
+.footer-col p {
+    font-family: var(--font-base);
+    margin-bottom: 8px;
+}
+
+.footer-col a {
+    color: var(--sfondo);
+    text-decoration: none;
+}
+
+.footer-col a:hover {
+    text-decoration: underline;
+}
+
+.footer-col p:hover {
+    text-decoration: underline;
+}
+
+.citazione-viaggio {
+    font-family: var(--font-subtitle);
+    color: var(--primario);
+    text-align: center;
+    margin-top: 64px;
+    margin-bottom: 64px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px;
+    padding: 0 20px;
+}
+.citazione-viaggio + section > .card_contenitore {
+    margin-top: 0;
+}
+
+.card_contenitore2 {
+    margin-top: 120px;
+    padding-left: 32px;
+    padding-right: 32px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+    align-items: stretch;
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-bottom: 120px;
+}
+
+.card_item2 {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card_img2 img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center 30%;
+}
+
+.card_text2 {
+    background-color: white;
+    padding: 32px 16px;
+    flex: 1;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card_text2 h2 {
+    font-size: 18px;
+    font-weight: normal;
+    font-family: var(--font-subtitle);
+    color: var(--primario);
+    margin-bottom: 0 0 10px 0;
+}
+
+.card_text2 p {
+    font-family: var(--font-base);
+    color: var(--primario);
+    font-size: 14px;
+    margin: 0;
+}
+
+.location-container2 {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.card_text2 .material-icons {
+    color: var(--secondario);
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+.sezione-storia {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.storia-img {
+    flex: 0 0 40%;
+    max-width: 450px;
+}
+
+.storia-img img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    height: 400px;
+    object-fit: cover;
+}
+
+.storia-text {
+    flex: 1;
+}
+
+.storia-text h2 {
+    font-family: var(--font-subtitle);
+    color: var(--primario);
+    font-size: 30px;
+    margin-bottom: 24px;
+    margin-top: 0;
+}
+
+.storia-text p {
+    font-family: var(--font-base);
+    color: var(--text);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.sezione-dettagli {
+    display: flex;
+    gap: 64px;
+    align-items: center;
+}
+
+.dettagli-img {
+    flex: 0 0 40%;
+}
+
+.dettagli-img img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    object-fit: cover;
+}
+
+.dettagli-info-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+}
+
+.info-item h3 {
+    font-family: var(--font-subtitle);
+    color: var(--primario);
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.info-item p {
+    font-family: var(--font-base);
+    color: var(--text);
+    font-size: 14px;
+}
+
+.contenitore-fisso {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 32px;
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.curiosità-info-grid {
+    margin-bottom: 80px;
+    margin-top: 80px;
+    margin-left: 80px;
+    margin-right: 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: start;
+}
+
+.curiosità-item h3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-subtitle);
+    color: var(--primario);
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.curiosità-item p {
+    font-family: var(--font-base);
+    color: var(--text);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.lista-parametri {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.lista-parametri li {
+    font-family: var(--font-base);
+    color: var(--text);
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.lista-parametri li strong {
+    color: var(--secondario);
+    text-decoration: none;
+}
+
+.sezione-piazza-escluse {
+    margin-top: 60px;
+    max-width: 800px;
+}
+
+.sezione-piazze-escluse h2 {
+    font-family: var(--font-subtitle);
+    color: var(--primario);
+    font-size: 30px;
+    margin-bottom: 24px;
+}
+
+.sezione-piazze-escluse p {
+    font-family: var(--font-base);
+    color: var(--text);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+@media (max-width:600px) {
+    .card_contenitore, .card_contenitore2, .curiosità_container, .curiosità_content {
+        max-width: 100%;
+        margin-left: 20px;
+        margin-right: 20px;
+        padding: 20px 0;
+    }
+    html, body {
+        overflow-x: hidden;
+        max-width: 100%;
+    }
+    header div {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 16px;
+        gap: 16px;
+    }
+    header p a {
+        font-size: 14px;
+        text-align: center;
+    }
+    header nav ul {
+        gap: 15px;
+        justify-content: center;
+        font-size: 12px;
+    }
+
+    .hero_img img {
+        height: 350px;
+    }
+    .hero_txt h1 {
+        font-size: 32px;
+        padding: 0 15px;
+    }
+
+    .card_contenitore {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+    .card_contenitore2 {
+        grid-template-columns: 1fr;
+        margin-top: 80px;
+    }
+    .card_text h2 {
+        font-size: 18px;
+    }
+    .card_text p {
+        font-size: 14px;
+    }
+    .card_text2 h2 {
+        font-size: 16px;
+    }
+    .card_text2 p {
+        font-size: 13px;
+    }
+    .curiosità_container {
+        display: flex;
+        flex-direction: column;
+        margin-left: 20px;
+        margin-right: 20px;
+        padding-right: 40px;
+        overflow: hidden;
+    }
+    .curiosità_content h3 {
+        font-size: 2rem;
+    }
+    .curiosità_content p {
+        font-size: 16px;
+    }
+    .curiosità_img_wrap {
+        margin: 0;
+        min-width: 0;
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .sezione-storia, .sezione-dettagli {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .storia-text h2 {
+        font-size: 24px;
+        text-align: center;
+    }
+    .storia-text p {
+        font-size: 14px;
+    }
+    .dettagli-img, .storia-img {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .dettagli-info-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+    }
+    .footer-col {
+        min-width: 100%;
+    }
+    .footer-col h5 {
+        font-size: 14px;
+    }
+    .footer-col p {
+        font-size: 12px;
+    }
+    .citazione-viaggio {
+        font-size: 20;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .contenitore-fisso {
+        padding: 40px 20px;
+    }
+
+    .curiosità-info-grid {
+        grid-template-columns: 1fr;
+        margin: 20px 20px;
+        gap: 40px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .curiosità-item h3 {
+        font-size: 17px;
+    }
+    .curiosità-item p {
+        font-size: 14px;
+    }
+
+    .sezione-piazze-escluse {
+        margin-top: 40px;
+        padding: 0 20px;
+    }
+    .sezione-piazze-escluse h2 {
+        font-size: 24px;
+        text-align: center;
+    }
+    .sezione-piazze-escluse p {
+        font-size: 14px;
+    }
+    .lista-parametri li {
+        font-size: 14px;
+        margin-bottom: 12px;
+    }
+
+}
