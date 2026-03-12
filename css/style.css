@@ -113,12 +113,14 @@ header nav ul {
 
 .card_contenitore {
     margin: 128px auto 0 auto;
-    padding: 0 20px;
-    display: flex;
-    gap: 32px;
+    padding: 0 32px;
+    display: grid;
+    gap: 20px;
 	flex-wrap: wrap;
 	justify-content: center;
 	max-width: 1200px;
+	width: 100%;
+	grid-template-columns: repeat(4, 1fr);
 }
 
 .card_item {
